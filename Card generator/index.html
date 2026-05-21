@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <title>Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <center>
+        <div  class="container">
+            <div class="form-header">
+                <span class="form-badge">ID Card Generator</span>
+                <h2>Create your ID card</h2>
+                <p class="form-sub">Fill in the details below to generate your card</p>
+            </div>
+
+            <form class="card-form" id="cardForm">
+
+                <div class="field-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Ahmed Khan" />
+                </div>
+
+                <div class="field-group">
+                    <label for="cnic">CNIC Number</label>
+                    <input type="text" id="cnic" name="cnic" placeholder="XXXXX-XXXXXXX-X" maxlength="15" />
+                </div>
+
+                <div class="field-row">
+                    <div class="field-group">
+                        <label for="course">Course</label>
+                        <select id="course" name="course">
+                            <option value="" disabled selected>Select course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="Android Development">Android Development</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                            <option value="Networking">Networking</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="campus">Campus</label>
+                        <select id="campus" name="campus">
+                            <option value="" disabled selected>Select campus</option>
+                            <option value="Zaitoon Ashraf IT Park">Zaitoon Ashraf IT Park</option>
+                            <option value="Titan Campus">Titan</option>
+                            <option value="Gulshan Campus">Gulshan Campus</option>
+                            <option value="Numaish Campus">Numaish Campus</option>
+                            <option value="Malir Campus">Malir Campus</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label>Gender</label>
+                    <div class="gender-group">
+                        <label class="radio-option">
+                            <input type="radio"  name="gender" value="male" />
+                            <span class="radio-custom"></span>
+                            Male
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="female" />
+                            <span class="radio-custom"></span>
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="photo">Profile Photo</label>
+                    <label class="upload-area" for="photo" id="uploadLabel">
+                        <div class="upload-icon">&#8679;</div>
+                        <span class="upload-text">Click to upload photo</span>
+                        <span class="upload-hint">JPG, PNG — max 2MB</span>
+                        <input type="file" id="photo" name="photo" accept="image/*" />
+                    </label>
+                    <div class="img-preview" id="imgPreview"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Generate ID Card</button>
+
+            </form>
+        </div>
+    </center>
+
+   
+ <center>
+<div class="id-card">
+ 
+    <div class="top-strip">
+        <div class="strip-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <span class="strip-label">STUDENT IDENTITY CARD</span>
+        <div class="strip-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+ 
+   
+    <div class="card-header">
+      
+        <div class="org-text">
+            <p class="org-name">SMIT Institute</p>
+            <p class="org-sub">Saylani Mass IT Training</p>
+        </div>
+    </div>
+ 
+    <div class="divider"></div>
+ 
+   
+    <div class="photo-section">
+        <div class="photo-wrap">
+            <img id="cardimg" src="https://i.pravatar.cc/150?img=11" alt="Student" />
+        </div>
+    </div>
+ 
+
+    <div class="name-section">
+        <p class="name-label">Full Name</p>
+        <h2 class="student-name" id="showName">Ahmed Khan</h2>
+        <div class="tags-row">
+            <span class="tag gender-tag" id="showGender">Male</span>
+            <span class="tag course-tag" id="showCourse">Web Development</span>
+        </div>
+    </div>
+ 
+    <div class="divider-thin"></div>
+ 
+  
+    <div class="info-grid">
+        <div class="info-item">
+            <span class="info-label">CNIC</span>
+            <span class="info-val" id="showCnic">42201-1234567-1</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Campus</span>
+            <span class="info-val" id="showCampus">Karachi</span>
+        </div>
+        <div  class="info-item">
+            <span class="info-label">Roll No</span>
+            <span class="info-val" id="Roll">S-5609</span>
+        </div>
+        <div  class="info-item">
+            <span class="info-label">Timing</span>
+            <span class="info-val">11:00 am - 01:00 am</span>
+        </div>
+    </div>
+ 
+    
+    <div class="card-footer">
+        <p style="margin-right: 120px;" class="footer-text">Authorized by SMIT &nbsp;|&nbsp; Not Transferable</p>
+        <div class="signature-box">
+            <div class="sig-line"></div>
+            <p class="sig-label">Director's Signature</p>
+        </div>
+    </div>
+ 
+</div> 
+</center>
+    <script src="app.js"></script>
+</body>
+
+</html>
